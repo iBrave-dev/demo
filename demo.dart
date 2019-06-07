@@ -13,7 +13,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       else if(event is ChangeProductState)
         yield* _changeProductStateMTS();
  }catch(e){
-     yield ErrorState():
+     yield ErrorState(e):
 } }
 Stream _addProductToWishListMTS()async*{
     //Api 
